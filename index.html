@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=./src/js/index.js defer></script>
+    <link rel=stylesheet href=./src/css/style.css>
+    <link rel=icon type=image/png href=https://img.icons8.com/color/48/000000/javascript.png>
+
+    <title>Customizer</title>
+</head>
+
+<body>
+    <h1>Custom t-shirts</h1>
+    <div class="container">
+        <!-- Option column -->
+        <aside class="options">
+            <h2>Customer</h2>
+            <!-- Title shirt -->
+            <div class="input-group">
+                <label for="shirt-title">Title</label>
+                <input type="text" id="shirt-title" maxlength="10" placeholder="Title...">
+            </div>
+            <!-- Control name -->
+            <div class="slider-group">
+                <label for="slider-x">Title 'left-right':</label>
+                <input type="range" id="slider-x" min="0" max="100" value="50">
+
+                <label for="slider-y">Title 'up-down':</label>
+                <input type="range" id="slider-y" min="0" max="100" value="50">
+            </div>
+            <!-- Color Shirt -->
+            <div class="color-options">
+                <label>Shirt:</label>
+                <label><input type="radio" name="shirt-color" value="black" checked onclick="changeShirtColor('black')">
+                    Black</label>
+                <label><input type="radio" name="shirt-color" value="white" onclick="changeShirtColor('white')">
+                    White</label>
+
+            </div>
+            <!-- Imágenes predefinidas -->
+            <div class="image-selection">
+                <label>Images selection:</label>
+                <div class="image-list">
+                    <img src="./src/img/chamber.png"  value="Chamber" onclick="selectImage('./src/img/chamber.png')" draggable="true">
+                    <img src="./src/img/cipher.png" value="Cipher" onclick="selectImage('./src/img/cipher.png')" draggable="true">
+                    <img src="./src/img/jett.png" value="Jett" onclick="selectImage('./src/img/jett.png')" draggable="true">
+                    <img src="./src/img/killjoy.png" value="Killjoy" onclick="selectImage('./src/img/killjoy.png')" draggable="true">
+                    <img src="./src/img/phoenix.png" value="Phoenix" onclick="selectImage('./src/img/phoenix.png')" draggable="true">
+                    <img src="./src/img/raze.png" value="Raze" onclick="selectImage('./src/img/raze.png')" draggable="true">
+                    <img src="./src/img/reyna.png" value="Reyna" onclick="selectImage('./src/img/reyna.png')" draggable="true">
+                    <img src="./src/img/sage.png" value="Sage" onclick="selectImage('./src/img/sage.png')" draggable="true">
+                    <img src="./src/img/skye.png" value="Skye" onclick="selectImage('./src/img/skye.png')" draggable="true">
+                    <img src="./src/img/sova.png" value="Sova" onclick="selectImage('./src/img/sova.png')" draggable="true">
+                    <img src="./src/img/viper.png" value="Viper" onclick="selectImage('./src/img/viper.png')" draggable="true">
+                    <img src="./src/img/yoru.png" value="Yoru" onclick="selectImage('./src/img/yoru.png')" draggable="true">
+                </div>
+            </div>
+        </aside>
+
+        <!-- View Shirt-->
+        <main class="main">
+            <div id="shirt" class="shirt">
+                <div id="shirt-background" class="shirt-background">
+                    <div id="title" class="title"></div>
+                    <div id="image-overlay-small" class="image-overlay-small"></div>
+                    <div id="image-overlay" class="image-overlay"></div>
+                    <div id="name-person" class="name-person"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
