@@ -42,8 +42,8 @@ function selectImage(imageSrc, imageName) {
 
 // Function click
 function imageClick(event) {
-  const imageSrc = event.target.src;
-  const imageName = event.target.getAttribute("value");
+  let imageSrc = event.target.src;
+  let imageName = event.target.getAttribute("value");
   selectImage(imageSrc, imageName);
 }
 
@@ -60,8 +60,8 @@ shirtBackground.addEventListener('dragover', (event) => {
 // event drop
 shirtBackground.addEventListener('drop', (event) => {
   event.preventDefault();
-  const imageSrc = event.dataTransfer.getData('imageSrc');
-  const imageName = event.dataTransfer.getData('imageName');
+  let imageSrc = event.dataTransfer.getData('imageSrc');
+  let imageName = event.dataTransfer.getData('imageName');
   selectImage(imageSrc, imageName);
 });
 
@@ -71,8 +71,8 @@ document.querySelectorAll('.image-list img').forEach(img => {
 });
 
 // Update the sliders
-const maxHorizontal = 20;
-const maxVertical = 20;
+let maxHorizontal = 20;
+let maxVertical = 20;
 
 titleElement.style.position = 'absolute';
 titleElement.style.left = '130px';
@@ -80,12 +80,12 @@ titleElement.style.top = '150px';
 titleElement.style.transform = 'translate(-50%, -50%)';
 
 sliderX.addEventListener("input", function () {
-  const moveX = (sliderX.value -50) * (maxHorizontal /50);
+  let moveX = (sliderX.value -50) * (maxHorizontal /50);
   titleElement.style.left = `${130 + moveX}px`;
 
 });
 sliderY.addEventListener("input", function () {
-  const moveY = (sliderY.value - 50) * (maxVertical / 50);
+  let moveY = (sliderY.value - 50) * (maxVertical / 50);
   titleElement.style.top = `${150 + moveY}px`;
 
 });
